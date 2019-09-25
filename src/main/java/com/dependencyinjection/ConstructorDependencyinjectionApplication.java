@@ -15,11 +15,8 @@ import com.dependencyinjection.beans.Employee;
 public class ConstructorDependencyinjectionApplication {
 
 	public static void main(String[] args) {
-		System.out.println(getEmployeeFromContext());
+		ApplicationContext context = SpringApplication.run(ConstructorDependencyinjectionApplication.class);
+		System.out.println(context.getBean(Employee.class));
 	}
 
-	public static Employee getEmployeeFromContext() {
-		ApplicationContext context = SpringApplication.run(ConstructorDependencyinjectionApplication.class);
-		return context.getBean(Employee.class);
-	}
 }
