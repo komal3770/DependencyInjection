@@ -7,19 +7,16 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 
-import com.dependencyinjection.beans.Employee;
-
+import com.dependencyinjection.beans.Company;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, 
-								  DataSourceTransactionManagerAutoConfiguration.class, 
-								  HibernateJpaAutoConfiguration.class})
-public class ConstructorDependencyinjectionApplication {
+		  DataSourceTransactionManagerAutoConfiguration.class, 
+		  HibernateJpaAutoConfiguration.class})
+public class SetterInjectionMain {
 
 	public static void main(String[] args) {
-		System.out.println(getEmployeeFromContext());
+		ApplicationContext context = SpringApplication.run(SetterInjectionMain.class);
+		Company company = context.getBean(Company.class);
+		System.out.println(company);
 	}
 
-	public static Employee getEmployeeFromContext() {
-		ApplicationContext context = SpringApplication.run(ConstructorDependencyinjectionApplication.class);
-		return context.getBean(Employee.class);
-	}
 }
