@@ -9,3 +9,5 @@
 **Q - What happen if both are called at the same time?**
 
 *Ans - Setter injection overrides constructor injection.*
+
+In this Example, demonstrated dependency injection user Spring IOC containers BeanFactory and ApplicationContext with latest updated methods.
