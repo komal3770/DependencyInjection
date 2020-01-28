@@ -1,5 +1,7 @@
 # Dependency Injection Example
 
+In this Example, demonstrated dependency injection user Spring IOC containers BeanFactory and ApplicationContext with latest updated methods & Demonstrated types of injections.
+
 ## 1.Contructor-based Dependency Injection
 ``` It is accomplished when the container invokes a class constructor with a number of arguments, each representing a dependency on other classes.```
 
@@ -9,5 +11,3 @@
 **Q - What happen if both are called at the same time?**
 
 *Ans - Setter injection overrides constructor injection.*
-
-In this Example, demonstrated dependency injection user Spring IOC containers BeanFactory and ApplicationContext with latest updated methods.
